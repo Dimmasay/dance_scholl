@@ -1,0 +1,33 @@
+.wrapper {
+}
+
+.title {
+  font-family: KyivTypeSans;
+  font-weight: 400;
+  @include adaptiveValue('font-size', 70, 50, 1);
+  @include adaptiveValue('line-height', 84, 60, 1);
+}
+
+.page {
+  flex: 1 1 auto;
+
+  &__hello {
+
+  }
+
+  &__about {
+
+  }
+
+  &__gallery {
+  }
+
+  &__schedule {
+  }
+
+  &__blog {
+  }
+
+  &__quote {
+  }
+}

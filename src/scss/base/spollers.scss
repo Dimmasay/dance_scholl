@@ -1,0 +1,62 @@
+.spollers-pathway {
+   &__item {
+      position: relative;
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__title {
+      width: 100%;
+      text-align: left;
+      padding: 24px 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      // font-weight: 400;
+      // font-size: 24px;
+      // line-height: 177%;
+      // color: #ffffff;
+
+      justify-content: space-between;
+      &::after {
+         content: "";
+         height: 24px;
+         width: 24px;
+         background: url("@img/icons/arrow.svg") 0 50% no-repeat;
+         transition: transform 0.5s ease 0s;
+      }
+      &._spoller-active {
+         &::after {
+            transform: rotate3d(1, 0, 0, 180deg);
+            transition: transform 0.5s ease 0s;
+         }
+      }
+   }
+
+   &__body {
+      display: inline-block;
+      margin-top: 5px;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.151);
+      line-height: 180%;
+      padding: 24px 30px;
+      border-radius: 10px;
+      transform: translate(0px, -20px);
+      opacity: 0;
+      transition: opacity 0.5s ease 0s;
+      transition: transform 0.5s ease 0s;
+
+      &._spoller-active {
+         display: inline-block;
+         position: relative;
+         transform: translate(0px, 0px);
+         opacity: 1;
+         transition: opacity 0.5s ease 0s;
+         transition: transform 0.5s ease 0s;
+      }
+   }
+}
