@@ -52,10 +52,7 @@ export function animOnScroll() {
                 }
 
                 if (animItemOffset + animItemHeight - pageYOffset < animOutItemPoint && animItemOffset + animItemHeight > pageYOffset) {
-                    // if ( animItemOffset + animItemHeight - pageYOffset < animOutItemPoint && animItemOffset + animItemHeight > pageYOffset && !animItem.closest('[data-anim-lock]')) {
                     animItem.classList.add('_active-out')
-                    // animItem.classList.remove('_active')
-                    // } else if (animItem.closest('[data-anim-out-lock]') && animItem.classList.contains('_active')) {
                 } else if (!animItem.closest('[data-anim-out-lock]')) {
                     animItem.classList.remove('_active-out')
                 }

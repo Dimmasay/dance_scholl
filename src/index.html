@@ -2,10 +2,10 @@
 <html lang="en">
 @@include('html/_head.html',{"title": "Dance School"})
 <body>
-@@include('html/_header.html',{})
 <div class="wrapper">
+    @@include('html/_header.html',{})
     <main class="page">
-        <div class="page__hello hello-page">
+        <section class="page__hello hello-page">
             <div class="hello-page__container">
                 <div class="hello-page__content" data-anim-items data-anim-lock>
                     <div class="hello-page__video">
@@ -17,19 +17,21 @@
                          data-anim-lock>
                 </div>
                 <div class="hello-page__links">
-                    <a href="https://uk-ua.facebook.com/" target="_blank" class="hello-page__link">
+                    <a href="https://uk-ua.facebook.com/" target="_blank" class="hello-page__link" data-anim-items
+                       data-anim-lock>
                         <img src="@img/header/icons/Facebook.svg" alt="Facebook">
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="hello-page__link">
+                    <a href="https://www.instagram.com/" target="_blank" class="hello-page__link" data-anim-items
+                       data-anim-lock>
                         <img src="@img/header/icons/Instagram.svg" alt="Instagram">
                     </a>
                 </div>
 
             </div>
-        </div>
-        <div class="page__about about-page">
+        </section>
+        <section class="page__about about-page">
             <div class="about-page__container">
-                <div class="about-page__title title">ABOUT US</div>
+                <div class="about-page__title title" data-anim-items data-anim-lock>ABOUT US</div>
                 <div class="about-page__content" data-anim-out-lock data-anim-items>
                     <div class="about-page__row-top top-row" data-anim-items data-anim-lock>
                         <div class="top-row__image">
@@ -82,13 +84,13 @@
                 </div>
             </div>
 
-        </div>
-        <div class="page__gallery gallery-page">
+        </section>
+        <section class="page__gallery gallery-page">
             <div class="gallery-page__container">
-                <div class="gallery-page__title title">
-                    <span>RHYTHM</span>
-                    <span>GALLERY</span>
-                </div>
+                    <div class="gallery-page__title title">
+                        <span>RHYTHM</span>
+                        <span>GALLERY</span>
+                    </div>
                 <div class="gallery-page__content gallery-content">
                     <div class="gallery-content__item gallery-content__item_1" data-anim-items data-anim-out-lock><img
                             src="@img/gallery/1.jpg" alt="1">
@@ -122,8 +124,8 @@
                     <button>View more</button>
                 </div>
             </div>
-        </div>
-        <div class="page__schedule schedule-page">
+        </section>
+        <section class="page__schedule schedule-page">
             <div class="schedule-page__container " data-anim-items data-anim-lock>
                 <div class="schedule-page__title title">OUR SCHEDULE</div>
                 <div class="schedule-page__row">
@@ -144,8 +146,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="page__blog blog-page">
+        </section>
+        <section class="page__blog blog-page">
             <div class="blog-page__container">
                 <div class="blog-page__title title" data-anim-items data-anim-lock>BLOG</div>
                 <div class="blog-page__content">
@@ -177,7 +179,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="blog-page__item blog-page__item_3 blog-item_bottom" data-anim-items data-anim-lock>
                         <div class="blog-item__image blog-item__image_bottom">
                             <img src="@img/blog/3.jpg" alt="3">
@@ -192,11 +193,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-        <div class="page__quote quote-page">
+        </section>
+        <section class="page__quote quote-page">
             <div class="quote-page__container" data-anim-items>
                 <div class="quote-page__text">Dance is simply the refinement of human movement - walking, running, and
                     jumping. We are all experts. There should be no art form more accessible than dance, yet no art is
@@ -205,10 +205,10 @@
                 <div class="quote-page__author">Twyla Tharp</div>
 
             </div>
-        </div>
+        </section>
     </main>
+    @@include('html/_footer.html',{})
 </div>
-@@include('html/_footer.html',{})
 <script src="js/app.min.js"></script>
 </body>
 </html>

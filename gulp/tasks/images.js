@@ -16,12 +16,12 @@ export const images = () => {
 
    //розкоментувати коли потрібне стичнення файлівб для локалної роботи це не потрібно!!!!!!!!!!!!!!
 
-   // .pipe(imagemin({  //зжимаємо картинку
-   //    progressive: true,
-   //    svgoPlugins: [{removeViewBox: false}],
-   //    interlaced: true,
-   //    optimizationLevel: 3,    //0 до 7
-   // }))
+   .pipe(imagemin({  //зжимаємо картинку
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      interlaced: true,
+      optimizationLevel: 3,    //0 до 7
+   }))
 
    
    .pipe(app.gulp.dest(app.path.build.images))

@@ -1,5 +1,4 @@
-.wrapper {
-}
+
 
 .title {
   font-family: KyivTypeSans;
@@ -10,6 +9,9 @@
 
 .page {
   flex: 1 1 auto;
+  overflow-x: clip;
+
+
 
   &__hello {
 
@@ -20,12 +22,20 @@
   }
 
   &__gallery {
+
   }
 
   &__schedule {
   }
 
   &__blog {
+    //overflow-y: visible;
+
+    //overflow-x: clip;
+    //display: flow-root
+    //padding-top: ;
+    //overflow-x: hidden;
+    //overflow-x: hidden;
   }
 
   &__quote {

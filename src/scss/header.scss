@@ -9,15 +9,17 @@
     z-index: 200;
     left: 0;
     top: 0;
-    max-width: 100%;
+   width: 100%;
     height: 130px;
     background-color: white;
     display: flex;
     align-items: center;
+
   }
 
   &__container {
     width: 100%;
+    flex: 1 1 auto;
   }
 
   &__top {
@@ -111,15 +113,11 @@
   justify-content: center;
 
   .header-logo__block {
-    //width: 300px;
-    //height: 155px;
     position: relative;
     z-index: 100;
     @include adaptiveValue('width', 300, 170, 1);
     @include adaptiveValue('height', 155, 86, 1);
-    //@media (max-width: $mobile) {
-    //  flex: 1 1 auto;
-    //}
+
   }
 
   &__dance {
@@ -230,6 +228,8 @@
       &._menu-active {
         left: 0;
       }
+
+
     }
   }
 
@@ -275,6 +275,18 @@
 .icon-menu {
   display: none;
   @media (max-width: $mobile) {
+
+    opacity: 0;
+    transition: all 0.6s ease 0.5s;
+    transform: translate(0px, -80px);
+
+    &._active {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+
+
+
     margin-left: 5px;
     width: 44px;
     display: block;
@@ -303,6 +315,9 @@
     span {
       top: calc(50% - 1px);
     }
+
+
+
     &._menu-active {
       span {
         width: 0;
