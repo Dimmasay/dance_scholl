@@ -357,6 +357,13 @@
       padding: 0px 15px;
       z-index: 10;
       text-align: center;
+      transition: transform 0.3s;
+      transform: translate(0px, 0px);
+
+
+      &._out {
+        transform: translate(0px, -200px);
+      }
 
       @media (max-width: 556px) {
         border: 1px solid inherit;

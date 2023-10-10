@@ -18,28 +18,41 @@ window.onload = function () {
         let title = document.querySelector('.gallery-page__title')
         let titleSticky = document.querySelector('.gallery-page__title_sticky')
         titleSticky.style.position = 'fixed'
-        titleSticky.style.visibility = 'hidden'
 
         if (window.innerWidth <= 767) {
             titleSticky.style.top = '135px'
 
+
             if (offset(title).top - pageYOffset < 135 && blockOffset + blockHeight > pageYOffset + window.innerHeight) {
                 title.style.visibility = 'hidden'
                 titleSticky.style.visibility = 'visible'
+                titleSticky.classList.remove('_out')
             } else {
                 title.style.visibility = 'visible'
                 titleSticky.style.visibility = 'hidden'
+            }
+
+            if (blockOffset + blockHeight < pageYOffset + window.innerHeight) {
+                titleSticky.style.visibility = 'visible'
+                titleSticky.classList.add('_out')
             }
         }
 
         if (window.innerWidth >= 768) {
             titleSticky.style.top = '50px'
+
             if (offset(title).top - pageYOffset < 50 && blockOffset + blockHeight > pageYOffset + window.innerHeight) {
                 title.style.visibility = 'hidden'
                 titleSticky.style.visibility = 'visible'
+                titleSticky.classList.remove('_out')
             } else {
                 title.style.visibility = 'visible'
                 titleSticky.style.visibility = 'hidden'
+            }
+
+            if (blockOffset + blockHeight < pageYOffset + window.innerHeight) {
+                titleSticky.style.visibility = 'visible'
+                titleSticky.classList.add('_out')
             }
         }
     }
